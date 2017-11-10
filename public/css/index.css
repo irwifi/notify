@@ -86,6 +86,10 @@
     cursor: pointer;
   }
 
+  .notify_sidebar_header i:hover {
+    color: #111;
+  }
+
   .notify_sidebar_header {
     padding: 5px 0px;
     font-size: 12px;
@@ -117,7 +121,7 @@
   .notify_sidebar_body {
     height: 100%;
     padding: 16px;
-    overflow: auto;
+    padding-right: 2px;
   }
 /* Sidebar ====================================== END */
 
@@ -128,6 +132,7 @@
     border: 1px solid #000;
     border-radius: 4px;
     margin-bottom: 18px;
+    width: 306px;
   }
 
   #notify_alert_sample {
@@ -149,4 +154,15 @@
     margin-right: -10px;
     cursor: pointer;
   }
+
+  .notify_alert i:hover {
+    color: #e25534;
+  }
 /* Notify Alert ====================================== END */
+
+
+/* Scrollbar ====================================== START */
+.mCSB_inside > .mCSB_container {
+  margin-right: 2px;
+}
+/* Scrollbar ====================================== END */
