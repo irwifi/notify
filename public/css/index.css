@@ -1,0 +1,152 @@
+/* Global ====================================== START */
+  * {
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .notify_main_body {
+    width: 1300px;
+    margin: 15px auto;
+    margin-top: 60px;
+  }
+/* Global ====================================== END */
+
+/* Notify Trigger ====================================== START */
+  .notify_trigger {
+    position:absolute;
+    width: 414px;
+    background: #d7f0f9;
+    border: 1px solid #9ddef5;
+    padding: 20px;
+    z-index: 1100;
+  }
+
+  .notify_trigger span {
+    font-weight: bold;
+  }
+
+  .notify_trigger div {
+    height: 38px;
+    margin: 20px 0 0;
+  }
+/* Notify Trigger ====================================== END */
+
+/* Sidebar ====================================== START */
+  .notify_sidebar_icon {
+    border: 2px solid #00c2ff; //#7fe0ff;
+    border-radius: 2px;
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 32px;
+    color: #00c2ff; //#7fe0ff;
+    opacity: 0.4;
+  }
+
+  .notify_sidebar_icon i {
+    margin-left: 2px;
+    vertical-align: top;
+    margin-top: 2px;
+  }
+
+  .notify_sidebar_icon:hover {
+    border-color: #00c2ff;
+    color: #00c2ff;
+    opacity:1;
+  }
+
+  .notify_sidebar {
+    display: block;
+    margin-right:-340px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 340px;
+    background: #d7f0f9;
+    border-left: 1px solid #9ddef5;
+  }
+
+  .notify_sidebar_header i {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 28px;
+    color: #545454;
+    cursor: pointer;
+  }
+
+  .notify_sidebar_header {
+    padding: 5px 0px;
+    font-size: 12px;
+  }
+
+  .notify_sidebar_header span {
+    width: 94px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: underline;
+    cursor:pointer;
+    color: #606267;
+    padding: 2px 5px 1px;
+  }
+
+  .notify_sidebar_header span:hover {
+    text-decoration: none;
+    color: #222323;
+  }
+
+  .notify_sidebar_header span.active {
+    cursor: default;
+    text-decoration: none;
+    font-weight:bold;
+    color: #eef6f7;
+    background: #f38a31;
+  }
+
+  .notify_sidebar_body {
+    height: 100%;
+    padding: 16px;
+    overflow: auto;
+  }
+/* Sidebar ====================================== END */
+
+/* Notify Alert ====================================== END */
+  .notify_alert {
+    display: block;
+    padding: 12px 16px 22px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin-bottom: 18px;
+  }
+
+  #notify_alert_sample {
+    display: none;
+  }
+
+  .notify_alert_header {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .notify_alert_body {
+    font-size:13px;
+  }
+
+  .notify_alert i {
+    font-size: 18px;
+    float: right;
+    margin-right: -10px;
+    cursor: pointer;
+  }
+/* Notify Alert ====================================== END */
