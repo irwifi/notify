@@ -31,9 +31,22 @@
     font-weight: bold;
   }
 
-  .notify_trigger div {
+  .notify_trigger div:first-of-type {
     height: 38px;
-    margin: 20px 0 0;
+    margin: 20px 0 6px;
+  }
+
+  .notify_level_select {
+    margin-left: -10px;
+    font-size: 12px;
+  }
+
+  .notify_level_select input{
+    margin-left: 3px;
+  }
+
+  .notify_level_select span{
+    padding: 8px 6px;
   }
 /* Notify Trigger ====================================== END */
 
@@ -156,13 +169,42 @@
   }
 
   .notify_alert i:hover {
-    color: #e25534;
+    font-weight: bold;
+    font-size: 20px;
   }
 /* Notify Alert ====================================== END */
 
 
 /* Scrollbar ====================================== START */
-.mCSB_inside > .mCSB_container {
-  margin-right: 2px;
-}
+  .mCSB_inside > .mCSB_container {
+    margin-right: 2px;
+  }
 /* Scrollbar ====================================== END */
+
+/* Alert Level ====================================== START */
+  .notify_alert_level1 {
+    background: #bbecc6;
+    border-color: #81de76;
+  }
+
+  .notify_alert_level2 {
+    background: #bbe7ec;
+    border-color: #79ced8;
+  }
+
+  .notify_alert_level3 {
+    background: #e9ecbb;
+    border-color: #dece76;
+  }
+
+  .notify_alert_level4 {
+    background: #ffa555;
+    border-color: #ff7800;
+  }
+
+  .notify_alert_level5 {
+    background: #ff3939;
+    border-color: #9a0303;
+    color: #FFF;
+  }
+/* Alert Level ====================================== END */

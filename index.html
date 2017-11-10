@@ -15,8 +15,15 @@
     <div class="notify_main_body">
       <div class="notify_trigger">
         To trigger a notification just call the function <span>trigger_notify(level, message [, title])</span> where ever needed.
-        <div>
-          <button class="btn btn-primary">Trigger Notification</button>
+
+        <div><button class="btn btn-primary">Trigger Notification</button></div>
+
+        <div class="notify_level_select">
+          <input type="radio" name="level" value=1 checked> <span class="notify_alert_level1">Level 1</span>
+          <input type="radio" name="level" value=2> <span class="notify_alert_level2">Level 2</span>
+          <input type="radio" name="level" value=3> <span class="notify_alert_level3">Level 3</span>
+          <input type="radio" name="level" value=4> <span class="notify_alert_level4">Level 4</span>
+          <input type="radio" name="level" value=5> <span class="notify_alert_level5">Level 5</span>
         </div>
       </div>
 
