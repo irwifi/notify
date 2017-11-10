@@ -52,7 +52,7 @@
 
 /* Sidebar ====================================== START */
   .notify_sidebar_icon {
-    border: 2px solid #00c2ff; //#7fe0ff;
+    border: 2px solid #00c2ff;
     border-radius: 2px;
     display: block;
     position: fixed;
@@ -62,14 +62,40 @@
     height: 40px;
     cursor: pointer;
     font-size: 32px;
-    color: #00c2ff; //#7fe0ff;
-    opacity: 0.4;
+    color: #00c2ff;
+    opacity: 0.5;
   }
 
   .notify_sidebar_icon i {
     margin-left: 2px;
     vertical-align: top;
     margin-top: 2px;
+  }
+
+  .notify_sidebar_icon span {
+    display: none;
+    color: #fff;
+    background: #F00;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 4px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    text-align: center;
+  }
+
+  .notify_sidebar_icon.active {
+    opacity: 0.7;
+    z-index: 1100;
+    background: #FFF;
+  }
+
+  .notify_sidebar_icon.active span {
+    display: block;
   }
 
   .notify_sidebar_icon:hover {
@@ -88,6 +114,7 @@
     width: 340px;
     background: #d7f0f9;
     border-left: 1px solid #9ddef5;
+    z-index: 1100;
   }
 
   .notify_sidebar_header i {
@@ -108,7 +135,7 @@
     font-size: 12px;
   }
 
-  .notify_sidebar_header span {
+  .notify_sidebar_header .notify_first  {
     width: 94px;
     display: inline-block;
     text-align: center;
@@ -118,17 +145,32 @@
     padding: 2px 5px 1px;
   }
 
-  .notify_sidebar_header span:hover {
+  .notify_sidebar_header .notify_first:hover {
     text-decoration: none;
     color: #222323;
   }
 
-  .notify_sidebar_header span.active {
+  .notify_sidebar_header .notify_first.active {
     cursor: default;
     text-decoration: none;
     font-weight:bold;
     color: #eef6f7;
     background: #f38a31;
+  }
+
+  .notify_sidebar_header .notify_header_counter {
+    display: inline-block;
+    background: #F00;
+    color: #FFF;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    float: right;
+    margin-right: 30px;
+    line-height: 30px;
   }
 
   .notify_sidebar_body {

@@ -24,6 +24,9 @@ let sidebar_toggle = () => {
 
 let trigger_notify = (level, message, title) => {
     let max_id = +($("#notify_alert_sample").attr("data-max_id")) + 1;
+    let counter = +($(".notify_sidebar_icon").attr("data-counter")) + 1;
+    $(".notify_sidebar_icon").attr({"data-counter": counter}).addClass("active").find("span").text(counter);
+    $(".notify_header_counter").text(counter);
 
     $("#dialog_modal").clone().attr({"id": "dialog_modal" + max_id}).appendTo("body");
     $('#dialog_modal' + max_id + " .modal-title").text(title);
@@ -31,11 +34,22 @@ let trigger_notify = (level, message, title) => {
     $('#dialog_modal' + max_id).modal();
     $('#dialog_modal' + max_id).on('hidden.bs.modal', function (e) {$(this).remove();});
 
-    $("#notify_alert_sample").attr({"data-max_id": max_id}).clone().attr({"id": "notify_alert" + max_id}).addClass("new notify_alert_level"+level).appendTo("#mCSB_1_container").show();
+    if($(".notify_oldest_top").hasClass("active")) {
+        $("#notify_alert_sample").attr({"data-max_id": max_id}).clone().attr({"id": "notify_alert" + max_id}).addClass("new notify_alert_level"+level).appendTo("#mCSB_1_container").show();
+    } else {
+        $("#notify_alert_sample").attr({"data-max_id": max_id}).clone().attr({"id": "notify_alert" + max_id}).addClass("new notify_alert_level"+level).prependTo("#mCSB_1_container").show();
+    }
     $('#notify_alert' + max_id + " .notify_alert_header").text(title);
     $('#notify_alert' + max_id + " .notify_alert_body").text(message);
 
     $(".notify_alert.new i").on("click", function(event) {
+        let counter = +($(".notify_sidebar_icon").attr("data-counter")) - 1;
+        $(".notify_sidebar_icon").attr({"data-counter": counter}).find("span").text(counter);
+        $(".notify_header_counter").text(counter);
+        if(counter === 0) {
+            $(".notify_sidebar_icon").removeClass("active");
+        }
+
         $(this).closest(".notify_alert").remove();
         event.stopPropagation();
     });
@@ -51,11 +65,13 @@ let play_audio = (level) => {
 };
 
 let on_top_event = () => {
-    $(".notify_sidebar_header span:not(.active)").on("click", () => {
-        $(".notify_sidebar_header span").toggleClass("active").off();
+    $(".notify_sidebar_header .notify_first:not(.active)").on("click", () => {
+        $(".notify_sidebar_header .notify_first").toggleClass("active").off();
         on_top_event();
 
-        // if(oldest_top)
+        $(".notify_alert").each(function() {
+            $(this).prependTo("#mCSB_1_container");
+        });
     });
 };
 })();
