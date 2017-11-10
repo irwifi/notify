@@ -216,12 +216,39 @@
   }
 /* Notify Alert ====================================== END */
 
-
 /* Scrollbar ====================================== START */
   .mCSB_inside > .mCSB_container {
     margin-right: 2px;
   }
 /* Scrollbar ====================================== END */
+
+/* Popup ====================================== START */
+  .notify_popup_level1 .modal-content {
+    background: #bbecc6;
+    border-color: #81de76;
+  }
+
+  .notify_popup_level2 .modal-content {
+    background: #bbe7ec;
+    border-color: #79ced8;
+  }
+
+  .notify_popup_level3 .modal-content {
+    background: #e9ecbb;
+    border-color: #dece76;
+  }
+
+  .notify_popup_level4 .modal-content {
+    background: #ffa555;
+    border-color: #ff7800;
+  }
+
+  .notify_popup_level5 .modal-content {
+    background: #ff3939;
+    border-color: #9a0303;
+    color: #FFF;
+  }
+/* Popup ====================================== END */
 
 /* Alert Level ====================================== START */
   .notify_alert_level1 {

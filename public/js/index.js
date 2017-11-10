@@ -28,7 +28,7 @@ let trigger_notify = (level, message, title) => {
     $(".notify_sidebar_icon").attr({"data-counter": counter}).addClass("active").find("span").text(counter);
     $(".notify_header_counter").text(counter);
 
-    $("#dialog_modal").clone().attr({"id": "dialog_modal" + max_id}).appendTo("body");
+    $("#dialog_modal").clone().attr({"id": "dialog_modal" + max_id}).addClass("notify_popup_level"+level).appendTo("body");
     $('#dialog_modal' + max_id + " .modal-title").text(title);
     $('#dialog_modal' + max_id + " .modal-body").text(message);
     $('#dialog_modal' + max_id).modal();
