@@ -1,4 +1,3 @@
-let notify = (() => {
 $(() => {
     sidebar_toggle();
     on_top_event();
@@ -7,7 +6,7 @@ $(() => {
 
     $(".notify_trigger button").on("click", () => {
         let level = $('.notify_level_select input:checked').val();
-        notify_trigger(level, "Here is the Notification Message. Press OK to close.", "Notification Title");
+        trigger_notify(level, "Here is the Notification Message. Press OK to close.", "Notification Title");
     });
 });
 
@@ -22,7 +21,7 @@ let sidebar_toggle = () => {
     });
 };
 
-let notify_trigger = (level, message, title) => {
+let trigger_notify = (level, message, title) => {
     let max_id = +($("#notify_alert_sample").attr("data-max_id")) + 1;
     let counter = +($(".notify_sidebar_icon").attr("data-counter")) + 1;
     $(".notify_sidebar_icon").attr({"data-counter": counter}).addClass("active").find("span").text(counter);
@@ -75,9 +74,6 @@ let on_top_event = () => {
     });
 };
 
-return {
-    trigger_notify: notify_trigger
-};
-})();
-
-notify.trigger_notify(2, "message", "title");
+trigger_notify(2, "message2", "title2");
+trigger_notify(3, "message3", "title3");
+trigger_notify(5, "message5", "title5");
